@@ -6,11 +6,8 @@ describe ('Pizza', function() {
   expect(testPizza.cost).to.equal(0);
   });
 
-  it("will total the cost of a pizza order", function() {
-    var testPizza = new Pizza("large");
-    console.log(testPizza);
-    giveTotal(['pepperoni','sausage'],testPizza);
-    console.log(sizePrice);
-    expect(testPizza.giveTotal()).to.equal(14.50);
+  it("will know the price for a size of pizza", function() {
+    var testPizza = new Pizza(2,"large");
+    expect(testPizza.sizeCost()).to.equal(14);
   });
 });

@@ -4,21 +4,21 @@ function Pizza(toppings, pizzaSize) {
   this.cost = 0;
 }
 
-Pizza.prototype.giveTotal = function() {
-  this.cost = this.toppings.length * .25 + this.pizzaSize;
-  console.log(this.toppings);
-  return this.cost;
-}
+// Pizza.prototype.giveTotal = function() {
+//   this.cost = this.toppings + this.pizzaSize;
+//   console.log(this.pizzaSize);
+//   return this.cost;
+// }
 
-var sizePrice = function(currentPizza) {
-  if (currentPizza === "small") {
-    currentPizza.pizzaSize = 10;
-  } else if (currentPizza === "medium") {
-    currentPizza.pizzaSize = 12;
-  } else if (currentPizza === "large") {
-    currentPizza.pizzaSize = 14;
-  } else if (currentPizza === "xlarge") {
-    currentPizza.pizzaSize = 16;
+Pizza.prototype.sizeCost = function() {
+  if (this.pizzaSize === "small") {
+    return 10;
+  } else if (this.pizzaSize === "medium") {
+    return 12;
+  } else if (this.pizzaSize === "large") {
+    return 14;
+  } else if (this.pizzaSize === "xlarge") {
+    return 16;
   } else {
     return false;
   }
