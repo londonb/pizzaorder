@@ -1,3 +1,12 @@
 #cost {
   display: none;
 }
+
+.jumbotron {
+  background-color: #12B22B;
+}
+
+body {
+  background-color: #E0641D;
+  font-family: monospace;
+}
