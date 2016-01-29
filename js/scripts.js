@@ -37,9 +37,7 @@ $(document).ready(function() {
     var toppings = $('input:checkbox:checked').length;
     var newPizza = new Pizza (toppings,pizzaSize);
     var cost = newPizza.giveTotal().toFixed(2);
-    console.log(pizzaSize);
-    console.log(toppings);
-    console.log(cost);
+    
     $("#moneyTotal").empty().append(cost);
 
     $('#cost').show();
