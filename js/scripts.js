@@ -26,3 +26,4 @@ Pizza.prototype.toppingTotal = function() {
 Pizza.prototype.giveTotal = function() {
   return this.sizeCost() + (this.toppingTotal() * .5);
 }
+//END BUSINESS LOGIC
