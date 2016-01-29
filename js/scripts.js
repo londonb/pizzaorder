@@ -4,12 +4,6 @@ function Pizza(toppings, pizzaSize) {
   this.cost = 0;
 }
 
-// Pizza.prototype.giveTotal = function() {
-//   this.cost = this.toppings + this.pizzaSize;
-//   console.log(this.pizzaSize);
-//   return this.cost;
-// }
-
 Pizza.prototype.sizeCost = function() {
   if (this.pizzaSize === "small") {
     return 10;
@@ -24,7 +18,11 @@ Pizza.prototype.sizeCost = function() {
   }
 }
 
-Pizza.prototype.toppingsCost = function() {
+Pizza.prototype.toppingTotal = function() {
   this.toppings = this.toppings ++;
   return this.toppings;
+}
+
+Pizza.prototype.giveTotal = function() {
+  return this.sizeCost() + (this.toppingTotal() * .5);
 }
