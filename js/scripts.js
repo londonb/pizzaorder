@@ -27,3 +27,17 @@ Pizza.prototype.giveTotal = function() {
   return this.sizeCost() + (this.toppingTotal() * .5);
 }
 //END BUSINESS LOGIC
+
+$(document).ready(function() {
+
+  $("form#choosePizza").submit(function(event) {
+    event.preventDefault();
+
+    var pizzaSize = $('select#sizeOfPizza').val();
+    var toppings = $()
+    console.log(pizzaSize);
+
+
+    $('#cost').show();
+  });
+});

@@ -13,42 +13,51 @@
     <div class="container">
       <div class="jumbotron">
         <h1>Order your pizza here</h1>
+
       </div> <!--END JUMBOTRON-->
 
       <div class="row">
         <div class="col-sm-7">
-          <h2>Select the size of pizza you want</h2>
-          <select class="form-control">
-            <option>small</option>
-            <option>medium</option>
-            <option>large</option>
-            <option>xlarge</option>
-          </select>
-          <h2>Select which toppings you want</h2>
-          <h4>Each topping is $.50</h4>
-          <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox1" value="option1"> Pepperoni
-          </label>
-          <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox2" value="option2"> Sasuage
-          </label>
-          <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox3" value="option3"> Black Olives
-          </label>
-          <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox4" value="option4"> Banana Peppers
-          </label>
-          <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox5" value="option5"> Green Peppers
-          </label>
-          <label class="radio-inline">
-            <input type="checkbox" id="inlineCheckbox6" value="option6"> Ham
-          </label>
+          <form id="choosePizza">
+            <div class="form-group">
+              <h2>Select the size of pizza you want</h2>
+              <select class="form-control" id="sizeOfPizza">
+                <option value="small">Small for $10</option>
+                <option value="medium">Medium for $12</option>
+                <option value="large">Large for $14</option>
+                <option value="xlarge">Extra Large for $16</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="toppingsPicker">
+              <h2>Select which toppings you want</h2>
+              <h4>Each topping is $.50</h4>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox1" value="option1"> Pepperoni
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox2" value="option2"> Sasuage
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> Black Olives
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox4" value="option4"> Banana Peppers
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox5" value="option5"> Green Peppers
+              </label>
+              <label class="radio-inline">
+                <input type="checkbox" id="inlineCheckbox6" value="option6"> Ham
+              </label>
+            </div>
+            <button type="submit" class="btn btn-success" id="order">Order Now</button>
+          </form>
         </div> <!--END LEFT COLLUMN-->
 
-        <div class="col-sm-5">
-          <h2>Your order will cost:</h2>
-        </div>
+          <div class="col-sm-5" id="cost">
+            <h2>Your order will cost: $ <span id="moneyTotal"></span></h2>
+          </div> <!--END RIGHT COLLUMN-->
 
       </div> <!--END ROW-->
 
