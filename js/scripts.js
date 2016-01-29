@@ -23,3 +23,8 @@ Pizza.prototype.sizeCost = function() {
     return false;
   }
 }
+
+Pizza.prototype.toppingsCost = function() {
+  this.toppings = this.toppings ++;
+  return this.toppings;
+}

@@ -10,4 +10,9 @@ describe ('Pizza', function() {
     var testPizza = new Pizza(2,"large");
     expect(testPizza.sizeCost()).to.equal(14);
   });
+
+  it("will know how many toppings on the pizza", function() {
+    var testPizza = new Pizza(2,"large");
+    expect(testPizza.toppingsCost()).to.equal(2);
+  });
 });
